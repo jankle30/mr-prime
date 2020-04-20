@@ -5,6 +5,41 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "name": "Python: Current File",
+            "type": "python",
+            "request": "launch",
+            "program": "${file}",
+            "console": "integratedTerminal"
+        },
+        {
+            "type": "truffle",
+            "request": "launch",
+            "name": "Debug Transaction with Truffle",
+            "stopOnEntry": false,
+            "txHash": "0x",
+            "files": [],
+            "workingDirectory": "${workspaceFolder}/,
+            "providerUrl": "http://127.0.0.1:8545"
+        },
+        {
+            "name": "Advpl Debug",
+            "type": "advpl",
+            "request": "launch",
+            "args": [],
+            "cwd": "",
+            "programRun": "${command:AskForProgramName}",
+            "stopOnEntry": false,
+            "enviromentInfo": "${command:GetEnvInfos}",
+            "workspace": "${workspaceFolder}/"
+        },
+        {
+            "type": "extendscript-debug",
+            "request": "launch",
+            "name": "Ask for script name",
+            "program": "${workspaceFolder}/${command:AskForScriptName}",
+            "stopOnEntry": false
+        },
+        {
             "name": "(gdb) Attach",
             "type": "cppdbg",
             "request": "attach",
@@ -31,26 +66,6 @@
             "environment": [],
             "externalConsole": false
         },
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         {
             "name": "Advpl Debug",
             "type": "advpl",
